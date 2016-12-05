@@ -9,6 +9,11 @@ class PagesController extends Controller
     public function home()
     {
         $people = ['Daniel','Eliane','Brisa','Chiquinho'];
-        return View('welcome',compact('people'));
+        return View('home',compact('people'));
+    }
+
+    public function about()
+    {
+        return View('about');
     }
 }

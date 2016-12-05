@@ -81,12 +81,6 @@
                 <div class="title m-b-md">
                     Laravel
                 </div>
-                <div>
-                    @foreach($people as $person)
-                        <li>{{ $person }}</li>
-                    @endforeach
-                </div>
-
                 <div class="links">
                     <a href="https://laravel.com/docs">Documentation</a>
                     <a href="https://laracasts.com">Laracasts</a>
