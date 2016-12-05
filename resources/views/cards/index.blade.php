@@ -2,9 +2,11 @@
 
 @section('content')
 
+ <h1>Meus Cards</h1>
+
 @foreach($cards as $card)
 
-    <h1><a href="../cards/{{ $card->id }}">{{ $card->title }}</a></h1>
+    <h3><a href="../cards/{{ $card->id }}">{{ $card->title }}</a></h1>
 
 @endforeach
 
