@@ -12,7 +12,13 @@
             
                 @foreach($card->notes as $note)
 
-                    <li class="list-group-item">{{ $note->body }}</li>
+                    <li class="list-group-item">
+                    
+                        {{ $note->body }}
+
+                        <a href="#" style="float:right"> {{ $note->user->username }} </a>
+                    
+                    </li>
 
                 @endforeach
 
@@ -28,7 +34,7 @@
 
                     <div class="form-group">
 
-                        <textarea name="body" class="form-control"></textarea>
+                        <textarea name="body" class="form-control">{{ old('body') }}</textarea>
                     
                     </div>
 
@@ -39,6 +45,20 @@
                     </div>
 
                 </form>
+
+                @if(count($errors))
+
+                    <ul>
+                    
+                        @foreach($errors->all() as $error)
+
+                            <li>{{ $error }}</li>
+
+                        @endforeach
+                    
+                    </ul>          
+
+                @endif          
 
         </div>
 
